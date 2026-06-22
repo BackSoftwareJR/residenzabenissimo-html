@@ -1,0 +1,7 @@
+{
+  "name": "residenzabenissimo-landing",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/validate-site.js"
+  }
+}

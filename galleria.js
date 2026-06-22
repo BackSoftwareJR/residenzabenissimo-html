@@ -1,5 +1,5 @@
 /**
- * Villa Katia - Galleria Fotografica
+ * Residenza Benissimo - Galleria Fotografica
  * Script per gestire la galleria a schermo intero con scorrimento automatico
  * e visualizzazione ottimizzata delle immagini
  */

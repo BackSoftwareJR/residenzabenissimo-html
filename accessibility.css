@@ -1,0 +1,76 @@
+/* 
+* Villa Katia - Miglioramenti di Accessibilità
+* Questo file migliora l'accessibilità del sito senza alterare il design esistente
+*/
+
+/* Gestione Focus */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+    outline: 2px solid var(--color-3);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(199, 106, 92, 0.3); /* Ombra color terracotta semi-trasparente */
+    text-decoration: underline;
+    transition: outline 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus specifico per elementi scuri (per aumentare il contrasto) */
+.footer-contacts a:focus,
+.cta-buttons .btn:focus,
+.service-card a:focus,
+.whatsapp-float:focus {
+    outline: 2px solid var(--color-5);
+    box-shadow: 0 0 0 4px rgba(255, 250, 250, 0.5); /* Ombra bianca semi-trasparente */
+}
+
+/* Miglioramento contrasto */
+.footer-contacts a,
+.footer-nav a {
+    color: var(--color-5);
+    font-weight: 600; /* Font più pesante per migliorare leggibilità */
+}
+
+/* Rimossa la rimozione di outline che potrebbe essere presente in altri CSS */
+*:focus {
+    outline: auto !important; /* Forza il ripristino dell'outline rimossa altrove */
+}
+
+/* Skip link per la navigazione da tastiera */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-3);
+    color: white;
+    padding: 8px 15px;
+    z-index: 100;
+    transition: top 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid var(--color-5);
+}
+
+/* Miglioramenti accessibilità per pulsanti hamburger e controlli simili */
+.mobile-toggle:focus,
+.lightbox-close:focus,
+.lightbox-prev:focus,
+.lightbox-next:focus {
+    outline: 2px solid var(--color-5);
+    box-shadow: 0 0 0 4px rgba(255, 250, 250, 0.5);
+}
+
+/* Migliorato contrasto per testi su sfondi colorati */
+.cta-section,
+.hero-content,
+.service-card,
+.site-footer {
+    /* Aumenta la leggibilità del testo bianco su sfondi colorati */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}

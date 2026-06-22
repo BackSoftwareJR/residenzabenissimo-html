@@ -1,0 +1,48 @@
+/* Fix per rimuovere il pulsante "Chiama ora" flottante */
+.chiama-ora,
+#chiama-ora,
+a[href^="tel:"].mobile-cta,
+.mobile-cta,
+div.mobile-cta,
+.cta-mobile,
+#mobile-cta {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -999;
+}
+
+/* Fix per migliorare la leggibilità della sezione Chi Siamo */
+.about-section {
+    /* Sostituire il gradient con un colore solido più scuro per migliorare la leggibilità */
+    background: var(--color-5);
+    position: relative;
+}
+
+/* Aggiungiamo un box con sfondo bianco attorno al testo per migliorare la leggibilità */
+.about-text {
+    background-color: rgba(255, 250, 250, 0.95); /* Colore bianco neve con leggera trasparenza */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Miglioriamo il contrasto del testo nella sezione Chi Siamo */
+.about-text h2 {
+    color: var(--color-3); /* Terracotta scuro per maggior contrasto */
+    font-weight: 700;
+}
+
+.about-text p {
+    color: var(--color-4); /* Nero profondo per leggibilità */
+    font-weight: 500;
+}
+
+/* Aggiungiamo un leggero bordo colorato alla citazione per enfatizzarla */
+.quote-callout {
+    border-left: 4px solid var(--color-3);
+    color: var(--color-4);
+    font-weight: 500;
+}

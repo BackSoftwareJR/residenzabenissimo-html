@@ -1,0 +1,291 @@
+/**
+ * Casa Famiglia Quercia - Galleria Fotografica
+ * File CSS dedicato per la galleria a schermo intero con scorrimento automatico
+ */
+
+
+
+/* Contenitore principale della galleria */
+.gallery-fullscreen {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Modificato da 1200px per adattarsi meglio alla viewport */
+    height: 70vh;
+    max-height: 800px; /* Altezza massima per mantenere proporzioni adeguate */
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: var(--color-background);
+    border-radius: 8px; /* Bordi arrotondati per un aspetto più elegante */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombra sottile per dare profondità */
+    box-sizing: border-box;
+}
+
+/* Stile delle singole slide */
+.gallery-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+    display: flex; /* Utilizziamo flexbox per centrare meglio l'immagine */
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Leggero padding per evitare che l'immagine tocchi i bordi */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Slide attiva */
+.gallery-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Immagini all'interno delle slide - gestione migliorata */
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Preservare le proporzioni */
+    object-position: center;
+    background-color: var(--color-background); /* Sfondo delicato per le immagini */
+    transition: transform 0.3s ease; /* Transizione fluida per hover */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Didascalia delle immagini */
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(47, 79, 79, 0.7); /* Grigio Ardesia Scuro con trasparenza */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 3;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(3px); /* Effetto sfocatura per modernizzare l'aspetto */
+}
+
+/* Controlli di navigazione */
+.gallery-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Pulsanti di navigazione */
+.gallery-control {
+    background-color: rgba(47, 79, 79, 0.5); /* Grigio Ardesia Scuro con trasparenza */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.gallery-control:hover {
+    background-color: rgba(47, 79, 79, 0.8); /* Grigio Ardesia Scuro con trasparenza */
+}
+
+/* Indicatori delle slide */
+.gallery-indicators {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 4;
+}
+
+.gallery-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(245, 222, 179, 0.5); /* Grano con trasparenza */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-indicator.active {
+    background-color: var(--color-primary);
+}
+
+/* Stile per il titolo della sezione */
+.gallery-section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-family: "Merriweather", serif;
+    color: var(--color-text);
+}
+
+.gallery-section-title p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-text);
+}
+
+/* Effetto hover sulle immagini */
+.gallery-slide:hover img {
+    transform: scale(1.02); /* Leggero zoom all'hover per migliorare l'interattività */
+}
+
+/* Miglioramento del lightbox per immagini a schermo intero */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+.lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: min(1400px, 100vw - 40px);
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+#lightbox-image {
+    max-height: 85vh; /* Altezza massima per evitare stiramenti eccessivi */
+    max-width: min(85vw, 100% - 20px); /* Larghezza massima per mantenere l'immagine nella viewport */
+    object-fit: contain; /* Mantenere proporzioni originali */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ombra per evidenziare l'immagine */
+    background-color: rgba(245, 245, 245, 0.05); /* Bianco Fumo con trasparenza */ /* Leggero sfondo per evidenziare i bordi */
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Media query per dispositivi mobili */
+@media screen and (max-width: 768px) {
+    .gallery-fullscreen {
+        height: 50vh;
+    }
+    
+    .gallery-control {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .gallery-caption {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .gallery-indicator {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .gallery-section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .gallery-section-title p {
+        font-size: 1rem;
+    }
+}

@@ -1511,15 +1511,17 @@ h2 {
     text-align: center;
     font-size: 16px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    z-index: 2147483646;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.35);
     animation: pulse 2s infinite;
+    visibility: visible;
+    opacity: 1;
 }
 
 @keyframes pulse {
@@ -1553,15 +1555,16 @@ h2 {
 }
 
 .whatsapp-text {
-    display: none;
+    display: inline;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 480px) {
     .whatsapp-float {
-        padding: 10px;
-        border-radius: 50%;
-        right: 20px;
-        bottom: 20px;
+        padding: 12px 18px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 0.88rem;
     }
 }
 
@@ -2340,6 +2343,39 @@ h2 {
 .legal-footer-nav a.active {
     color: var(--color-primary);
     font-weight: 600;
+}
+
+.legal-footer-blog {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #d2d2d7;
+}
+
+.legal-footer-blog h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.75rem;
+    color: #6e6e73;
+}
+
+.legal-footer-blog-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    justify-content: center;
+}
+
+.legal-footer-blog-links a {
+    font-size: 0.8125rem;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.legal-footer-blog-links a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

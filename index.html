@@ -62,7 +62,7 @@
      <link rel="stylesheet" href="faq.css?v=3.1.0">
      <link rel="stylesheet" href="accessibility.css?v=3.1.0">
      <link rel="stylesheet" href="nav.css?v=3.1.0">
-     <link rel="stylesheet" href="ux-system.css?v=2.0.0">
+     <link rel="stylesheet" href="ux-system.css?v=2.1.0">
     
     <!-- Inizializzazione animazioni -->
     <script>
@@ -515,27 +515,41 @@
     <!-- Sezione Contatti -->
     <section class="contact-section fade-in-up" id="contatti" aria-labelledby="contact-heading">
         <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info fade-in-left delay-1">
-                    <div class="section-header">
-                        <span class="section-eyebrow">Contatti</span>
-                        <h2 id="contact-heading">Vieni a trovarci</h2>
-                        <p>Siamo felici di accoglierti per una visita senza impegno e rispondere a tutte le tue domande</p>
-                    </div>
-                    <p class="fade-in-up delay-2">Organizziamo volentieri un appuntamento per mostrarti la struttura, presentarti il team e capire insieme le esigenze del tuo caro.</p>
-                    <ul class="contact-list fade-in-up delay-2">
-                        <li class="fade-in-up delay-3"><span class="contact-label">Indirizzo</span> Via Fratelli Sosso 37, Casale Monferrato (AL)</li>
-                        <li class="fade-in-up delay-4"><span class="contact-label">P.IVA</span> IT02767310069</li>
-                        <li class="fade-in-up delay-5"><span class="contact-label">Telefono</span> <a href="tel:+393409909494">+39 340 990 9494</a></li>
-                        <li class="fade-in-up delay-6"><span class="contact-label">WhatsApp</span> <a href="https://wa.me/393409909494" target="_blank" class="whatsapp-link">+39 340 990 9494</a></li>
-                        <li class="fade-in-up delay-7"><span class="contact-label">Email</span> <a href="mailto:teo1916.servizi@gmail.com">teo1916.servizi@gmail.com</a></li>
-                    </ul>
-                    <div class="cta-buttons fade-in-up delay-8">
-                        <a href="tel:+393409909494" class="btn btn-call">Chiama ora</a>
-                        <a href="https://wa.me/393409909494" class="btn btn-whatsapp">Scrivici su WhatsApp</a>
-                    </div>
+            <header class="contact-intro fade-in-up">
+                <span class="section-eyebrow">Contatti</span>
+                <h2 id="contact-heading">Vieni a trovarci</h2>
+                <p class="contact-lead">Una visita in presenza è il modo migliore per capire se Benissimo è la casa giusta per il tuo caro. Ti accogliamo con calma, senza impegno.</p>
+            </header>
+
+            <div class="contact-layout">
+                <div class="contact-channels fade-in-up delay-1">
+                    <article class="contact-channel">
+                        <span class="contact-channel-label">Telefono</span>
+                        <a href="tel:+393409909494" class="contact-channel-value">+39 340 990 9494</a>
+                        <p class="contact-channel-note">Disponibili tutti i giorni per rispondere alle tue domande.</p>
+                    </article>
+                    <article class="contact-channel">
+                        <span class="contact-channel-label">WhatsApp</span>
+                        <a href="https://wa.me/393409909494" target="_blank" rel="noopener noreferrer" class="contact-channel-value contact-channel-value--whatsapp">Scrivici su WhatsApp</a>
+                        <p class="contact-channel-note">Risposta rapida, anche fuori orario d'ufficio.</p>
+                    </article>
+                    <article class="contact-channel">
+                        <span class="contact-channel-label">Email</span>
+                        <a href="mailto:teo1916.servizi@gmail.com" class="contact-channel-value">teo1916.servizi@gmail.com</a>
+                        <p class="contact-channel-note">Per richieste dettagliate o documentazione.</p>
+                    </article>
+                    <article class="contact-channel">
+                        <span class="contact-channel-label">Indirizzo</span>
+                        <p class="contact-channel-value contact-channel-value--text">Via Fratelli Sosso 37<br>15033 Casale Monferrato (AL)</p>
+                        <p class="contact-channel-note">Nel cuore del Monferrato, facile da raggiungere.</p>
+                    </article>
+                    <article class="contact-channel contact-channel--legal">
+                        <span class="contact-channel-label">P.IVA</span>
+                        <p class="contact-channel-value contact-channel-value--text">IT02767310069</p>
+                    </article>
                 </div>
-                <div class="contact-map fade-in-right delay-3">
+
+                <div class="contact-map-col fade-in-up delay-2">
                     <div class="contact-map-frame">
                         <iframe
                             title="Mappa Residenza Benissimo — Via Fratelli Sosso 37, Casale Monferrato"
@@ -552,6 +566,12 @@
                         Ottieni indicazioni stradali
                     </a>
                 </div>
+            </div>
+
+            <div class="contact-ctas fade-in-up delay-3">
+                <a href="tel:+393409909494" class="btn btn-call">Chiama</a>
+                <a href="https://wa.me/393409909494?text=Ciao,%20vorrei%20prenotare%20una%20visita%20a%20Residenza%20Benissimo" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="mailto:teo1916.servizi@gmail.com?subject=Prenotazione%20visita%20Residenza%20Benissimo" class="btn btn-outline contact-btn-visit">Prenota visita</a>
             </div>
         </div>
     </section>
@@ -635,6 +655,16 @@
                         </ul>
                     </div>
                     <div class="footer-col">
+                        <h4>Guide per famiglie</h4>
+                        <ul>
+                            <li><a href="blog/index.html">Tutte le guide</a></li>
+                            <li><a href="blog/come-scegliere-casa-famiglia-monferrato.html">Casa famiglia vs RSA</a></li>
+                            <li><a href="blog/preparare-genitore-trasferimento-residenza.html">Preparare al trasferimento</a></li>
+                            <li><a href="blog/assistenza-anziani-24h-monferrato.html">Assistenza 24h</a></li>
+                            <li><a href="blog/giornata-prova-visita-residenza.html">Giornata di prova</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
                         <h4>Contatti rapidi</h4>
                         <ul class="footer-contacts">
                             <li><a href="tel:+393409909494" aria-label="Chiama Residenza Benissimo al numero +39 340 9909494">+39 340 990 9494</a></li>
@@ -667,7 +697,8 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/393409909494?text=Ciao,%20vorrei%20maggiori%20informazioni%20su%20Residenza%20per%20anziani%20Benissimo" class="whatsapp-float" target="_blank" aria-label="Contatta Residenza per anziani Benissimo su WhatsApp">
+    <a href="https://wa.me/393409909494?text=Ciao,%20vorrei%20maggiori%20informazioni%20su%20Residenza%20per%20anziani%20Benissimo" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contatta Residenza per anziani Benissimo su WhatsApp">
+        <img src="icons/whatsapp.svg" alt="" class="whatsapp-icon" width="22" height="22" aria-hidden="true">
         <span class="whatsapp-text">WhatsApp</span>
     </a>
 

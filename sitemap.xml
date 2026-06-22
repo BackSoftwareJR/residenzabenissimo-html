@@ -7,6 +7,36 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://landing.residenzabenissimo.it/blog/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://landing.residenzabenissimo.it/blog/come-scegliere-casa-famiglia-monferrato.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://landing.residenzabenissimo.it/blog/preparare-genitore-trasferimento-residenza.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://landing.residenzabenissimo.it/blog/assistenza-anziani-24h-monferrato.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://landing.residenzabenissimo.it/blog/giornata-prova-visita-residenza.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://landing.residenzabenissimo.it/privacy.html</loc>
     <lastmod>2025-08-02</lastmod>
     <changefreq>yearly</changefreq>

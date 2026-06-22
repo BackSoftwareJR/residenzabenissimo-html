@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.fade-in-left',
         '.fade-in-right',
         '.schedule-item',
-        '.why-card',
+        '.why-item',
         '.testimonial-card',
         '.step-card'
     ].join(', ');

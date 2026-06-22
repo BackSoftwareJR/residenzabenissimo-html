@@ -57,7 +57,7 @@
      <link rel="stylesheet" href="faq.css?v=3.1.0">
      <link rel="stylesheet" href="accessibility.css?v=3.1.0">
      <link rel="stylesheet" href="nav.css?v=3.1.0">
-     <link rel="stylesheet" href="ux-system.css?v=1.1.0">
+     <link rel="stylesheet" href="ux-system.css?v=2.0.0">
     
     <!-- Inizializzazione animazioni -->
     <script>
@@ -97,15 +97,22 @@
     
     
     <header class="main-header" id="mainHeader">
-    <div class="header-content">
-        <div class="logo-header">
+        <div class="header-content">
+            <a href="#home" class="logo-header" aria-label="Residenza Benissimo — Home">Benissimo</a>
+            <nav class="header-nav" aria-label="Navigazione principale">
+                <a href="#mission">Chi siamo</a>
+                <a href="#servizi">Servizi</a>
+                <a href="#galleria">Galleria</a>
+                <a href="#contatti">Contatti</a>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+393409909494" class="header-call">Chiama</a>
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="sidebar">
+                    <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                </button>
+            </div>
         </div>
-        <div class="menu-toggle" id="menuToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="sidebar">
-            <span class="menu-icon">☰</span>
-        </div>
-        
-    </div>
-</header>
+    </header>
 
 <div class="sidebar" id="sidebar">
     <div class="sidebar-content">
@@ -203,27 +210,27 @@
                 <h2 id="why-heading">Non una RSA. Una vera casa.</h2>
                 <p>Benissimo è pensata per chi cerca accoglienza umana, rapporti autentici e un ambiente familiare — non un'istituzione.</p>
             </div>
-            <div class="why-grid">
-                <div class="why-card fade-in-up delay-1">
-                    <div class="why-card-icon" aria-hidden="true">🏠</div>
+            <div class="why-flow">
+                <article class="why-item fade-in-up delay-1">
+                    <span class="why-item-label">01</span>
                     <h3>Ambiente familiare</h3>
                     <p>Gruppi ristretti, convivenza calda e relazioni che nascono naturalmente tra ospiti e staff.</p>
-                </div>
-                <div class="why-card fade-in-up delay-2">
-                    <div class="why-card-icon" aria-hidden="true">💙</div>
+                </article>
+                <article class="why-item fade-in-up delay-2">
+                    <span class="why-item-label">02</span>
                     <h3>Cura personalizzata</h3>
                     <p>Ogni ospite ha il suo ritmo, le sue abitudini e un piano di assistenza costruito insieme alla famiglia.</p>
-                </div>
-                <div class="why-card fade-in-up delay-3">
-                    <div class="why-card-icon" aria-hidden="true">🌿</div>
+                </article>
+                <article class="why-item fade-in-up delay-3">
+                    <span class="why-item-label">03</span>
                     <h3>Spazi verdi</h3>
                     <p>Giardino attrezzato e aree relax all'aperto per passeggiate e momenti di serenità in sicurezza.</p>
-                </div>
-                <div class="why-card fade-in-up delay-4">
-                    <div class="why-card-icon" aria-hidden="true">🤝</div>
+                </article>
+                <article class="why-item fade-in-up delay-4">
+                    <span class="why-item-label">04</span>
                     <h3>Famiglia coinvolta</h3>
                     <p>Visite libere, comunicazione costante e un percorso di inserimento graduale e rispettoso.</p>
-                </div>
+                </article>
             </div>
             <div class="why-compare fade-in-up delay-5">
                 <div class="why-compare-col why-compare-col--us">
@@ -260,21 +267,21 @@
                 <h3 class="services-group-title">Assistenza e cura</h3>
                 <div class="services-grid services-grid--split">
                     <div class="service-card service-card--modern fade-in-up delay-1" aria-labelledby="service-title-1">
-                        <img src="icons/assistenza.svg" alt="Assistenza 24 ore su 24 per anziani" class="service-icon" loading="lazy">
+                        <span class="service-accent" aria-hidden="true"></span>
                         <div class="service-card-content">
                             <h3 id="service-title-1">Assistenza 24h e presenza costante</h3>
                             <p>Il nostro staff è sempre presente, giorno e notte, per garantire sicurezza e serenità in ogni momento.</p>
                         </div>
                     </div>
                     <div class="service-card service-card--modern fade-in-up delay-2" aria-labelledby="service-title-2">
-                        <img src="icons/pasti.svg" alt="Pasti genuini preparati in casa" class="service-icon" loading="lazy">
+                        <span class="service-accent service-accent--warm" aria-hidden="true"></span>
                         <div class="service-card-content">
                             <h3 id="service-title-2">Pasti sani e personalizzati</h3>
                             <p>Offriamo colazione, pranzo, merenda e cena preparati con ingredienti freschi e di qualità. I menù sono personalizzati per le esigenze di ogni ospite.</p>
                         </div>
                     </div>
                     <div class="service-card service-card--modern fade-in-up delay-3" aria-labelledby="service-title-3">
-                        <img src="icons/pulizia.svg" alt="Servizio di pulizia quotidiana degli ambienti" class="service-icon" loading="lazy">
+                        <span class="service-accent service-accent--soft" aria-hidden="true"></span>
                         <div class="service-card-content">
                             <h3 id="service-title-3">Ambienti puliti e ordinati ogni giorno</h3>
                             <p>Ci prendiamo cura della pulizia quotidiana degli spazi, del bucato e della biancheria, per offrire comfort e igiene.</p>
@@ -287,21 +294,21 @@
                 <h3 class="services-group-title">Benessere e spazi</h3>
                 <div class="services-grid services-grid--split">
                     <div class="service-card service-card--modern fade-in-up delay-4" aria-labelledby="service-title-4">
-                        <img src="icons/medico.svg" alt="Assistenza sanitaria e gestione terapie" class="service-icon" loading="lazy">
+                        <span class="service-accent service-accent--soft" aria-hidden="true"></span>
                         <div class="service-card-content">
                             <h3 id="service-title-4">Assistenza sanitaria e gestione terapie</h3>
                             <p>La nostra struttura collabora con i medici curanti e segue ogni terapia con attenzione, nel rispetto delle esigenze individuali di ciascun ospite.</p>
                         </div>
                     </div>
                     <div class="service-card service-card--modern fade-in-up delay-5" aria-labelledby="service-title-5">
-                        <img src="icons/attivita.svg" alt="Attività ricreative e laboratori stimolanti per anziani" class="service-icon" loading="lazy">
+                        <span class="service-accent service-accent--warm" aria-hidden="true"></span>
                         <div class="service-card-content">
                             <h3 id="service-title-5">Attività ricreative e socializzazione</h3>
                             <p>Organizziamo attività quotidiane per stimolare la mente e il corpo: ginnastica dolce, laboratori creativi, giochi di società e molto altro.</p>
                         </div>
                     </div>
                     <div class="service-card service-card--modern fade-in-up delay-6" aria-labelledby="service-title-6">
-                        <img src="icons/giardino.svg" alt="Ampio giardino attrezzato di 1000 mq con orto" class="service-icon" loading="lazy">
+                        <span class="service-accent" aria-hidden="true"></span>
                         <div class="service-card-content">
                             <h3 id="service-title-6">Ampi spazi verdi e aree relax</h3>
                             <p>Disponiamo di un grande giardino attrezzato dove passeggiare, rilassarsi e godere di momenti all'aria aperta in totale sicurezza.</p>
@@ -315,7 +322,7 @@
                 <span class="location-highlight">Benissimo srl — Via Fratelli Sosso 37, <strong>Casale Monferrato (AL)</strong></span>
                 </p>
                 <div class="cta-buttons">
-                    <a href="tel:+393409909494" class="btn btn-call"><i class="fas fa-phone-alt"></i> Chiama ora</a>
+                    <a href="tel:+393409909494" class="btn btn-call">Chiama ora</a>
                     <a href="#contatti" class="btn btn-outline">Maggiori informazioni</a>
                 </div>
             </div>
@@ -470,24 +477,21 @@
             </div>
             <div class="testimonials-grid">
                 <blockquote class="testimonial-card fade-in-up delay-1">
-                    <div class="testimonial-stars" aria-label="5 stelle su 5">★★★★★</div>
                     <p>"Abbiamo cercato a lungo un posto dove nostra madre si sentisse davvero accolta. Qui l'abbiamo trovato: personale gentile, ambienti curati e un'atmosfera che ricorda casa."</p>
                     <footer>
-                        <cite>— Famiglia R., Casale Monferrato</cite>
+                        <cite>Famiglia R., Casale Monferrato</cite>
                     </footer>
                 </blockquote>
                 <blockquote class="testimonial-card fade-in-up delay-2">
-                    <div class="testimonial-stars" aria-label="5 stelle su 5">★★★★★</div>
                     <p>"La giornata di prova ci ha convinto subito. Mio padre si è ambientato con calma, senza stress. Il team ci ha tenuto aggiornati in ogni fase."</p>
                     <footer>
-                        <cite>— Famiglia M., provincia di Alessandria</cite>
+                        <cite>Famiglia M., provincia di Alessandria</cite>
                     </footer>
                 </blockquote>
                 <blockquote class="testimonial-card fade-in-up delay-3">
-                    <div class="testimonial-stars" aria-label="5 stelle su 5">★★★★★</div>
                     <p>"Quello che ci ha colpito di più è l'attenzione ai dettagli: i pasti, le attività, il giardino. Si vede che ci tengono davvero a ogni ospite."</p>
                     <footer>
-                        <cite>— Famiglia B., Monferrato</cite>
+                        <cite>Famiglia B., Monferrato</cite>
                     </footer>
                 </blockquote>
             </div>
@@ -541,14 +545,14 @@
                     </div>
                     <p class="fade-in-up delay-2">Organizziamo volentieri un appuntamento per mostrarti la struttura, presentarti il team e capire insieme le esigenze del tuo caro.</p>
                     <ul class="contact-list fade-in-up delay-2">
-                        <li class="fade-in-up delay-3"><img src="icons/location.svg" alt="" class="contact-icon" width="24" height="24" loading="eager"><strong>Indirizzo:</strong> Via Fratelli Sosso 37, Casale M.TO (AL)</li>
-                        <li class="fade-in-up delay-4"><img src="icons/phone.svg" alt="" class="contact-icon" width="24" height="24" loading="eager"><strong>Telefono:</strong> <a href="tel:+393409909494">+39 340 9909494</a></li>
-                        <li class="fade-in-up delay-5"><img src="icons/whatsapp.svg" alt="" class="contact-icon" width="24" height="24" loading="eager"><strong>WhatsApp:</strong> <a href="https://wa.me/393409909494" target="_blank" class="whatsapp-link">+39 340 9909494</a></li>
-                        <li class="fade-in-up delay-6"><img src="icons/email.svg" alt="" class="contact-icon" width="24" height="24" loading="eager"><strong>Email:</strong> <a href="mailto:teo1916.servizi@gmail.com">teo1916.servizi@gmail.com</a></li>
+                        <li class="fade-in-up delay-3"><span class="contact-label">Indirizzo</span> Via Fratelli Sosso 37, Casale Monferrato (AL)</li>
+                        <li class="fade-in-up delay-4"><span class="contact-label">Telefono</span> <a href="tel:+393409909494">+39 340 990 9494</a></li>
+                        <li class="fade-in-up delay-5"><span class="contact-label">WhatsApp</span> <a href="https://wa.me/393409909494" target="_blank" class="whatsapp-link">+39 340 990 9494</a></li>
+                        <li class="fade-in-up delay-6"><span class="contact-label">Email</span> <a href="mailto:teo1916.servizi@gmail.com">teo1916.servizi@gmail.com</a></li>
                     </ul>
                     <div class="cta-buttons fade-in-up delay-7">
                         <a href="tel:+393409909494" class="btn btn-call">Chiama ora</a>
-                        <a href="https://wa.me/393409909494" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Scrivici su WhatsApp</a>
+                        <a href="https://wa.me/393409909494" class="btn btn-whatsapp">Scrivici su WhatsApp</a>
                     </div>
                 </div>
                 <div class="contact-map fade-in-right delay-3">
@@ -565,7 +569,7 @@
                         </iframe>
                     </div>
                     <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Fratelli+Sosso+37,+15033+Casale+Monferrato+AL" class="contact-map-link" target="_blank" rel="noopener noreferrer">
-                        <img src="icons/location.svg" alt="" width="18" height="18"> Ottieni indicazioni stradali
+                        Ottieni indicazioni stradali
                     </a>
                 </div>
             </div>
@@ -616,8 +620,8 @@
                 <h3>Non hai trovato la risposta che cercavi?</h3>
                 <p>Contattaci direttamente: saremo lieti di aiutarti.</p>
                 <div class="cta-buttons">
-                    <a href="tel:+393409909494" class="btn btn-call"><i class="fas fa-phone-alt"></i> Chiama ora</a>
-                    <a href="https://wa.me/393409909494" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Scrivici su WhatsApp</a>
+                    <a href="tel:+393409909494" class="btn btn-call">Chiama ora</a>
+                    <a href="https://wa.me/393409909494" class="btn btn-whatsapp">Scrivici su WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -653,9 +657,9 @@
                     <div class="footer-col">
                         <h4>Contatti rapidi</h4>
                         <ul class="footer-contacts">
-                            <li><a href="tel:+393409909494" aria-label="Chiama Residenza Benissimo al numero +39 340 9909494"><img src="icons/phone.svg" alt="Icona telefono" loading="lazy"> +39 340 990 9494</a></li>
-                            <li><a href="https://wa.me/393409909494" target="_blank" aria-label="Contatta Residenza Benissimo su WhatsApp"><img src="icons/whatsapp.svg" alt="Icona WhatsApp" loading="lazy"> +39 340 990 9494</a></li>
-                            <li><a href="mailto:teo1916.servizi@gmail.com" aria-label="Invia email a Residenza Benissimo"><img src="icons/email.svg" alt="Icona email" loading="lazy"> teo1916.servizi@gmail.com</a></li>
+                            <li><a href="tel:+393409909494" aria-label="Chiama Residenza Benissimo al numero +39 340 9909494">+39 340 990 9494</a></li>
+                            <li><a href="https://wa.me/393409909494" target="_blank" aria-label="Contatta Residenza Benissimo su WhatsApp">WhatsApp</a></li>
+                            <li><a href="mailto:teo1916.servizi@gmail.com" aria-label="Invia email a Residenza Benissimo">teo1916.servizi@gmail.com</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -684,8 +688,7 @@
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/393409909494?text=Ciao,%20vorrei%20maggiori%20informazioni%20su%20Residenza%20per%20anziani%20Benissimo" class="whatsapp-float" target="_blank" aria-label="Contatta Residenza per anziani Benissimo su WhatsApp">
-        <img src="icons/whatsapp.svg" alt="Contatta Residenza per anziani Benissimo su WhatsApp" class="whatsapp-icon" loading="lazy">
-        <span class="whatsapp-text">Parliamone insieme</span>
+        <span class="whatsapp-text">WhatsApp</span>
     </a>
 
     <!-- Lightbox per la Galleria -->
@@ -702,7 +705,7 @@
     <!-- JavaScript -->
     <script src="script.js?v=2.0.0"></script>
     <script src="galleria.js"></script>
-    <script src="js/animations.js?v=2.0.0"></script>
+     <script src="js/animations.js?v=2.1.0"></script>
     
     <!-- Script per FAQ interattive -->
     <script>

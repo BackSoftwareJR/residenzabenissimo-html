@@ -1,175 +1,24 @@
-/* 
- * CSS dedicato alla sezione Chi Siamo - Residenza Benissimo
- * File indipendente per evitare conflitti con altri stili
+/*
+ * CSS dedicato alla sezione Chi Siamo — Residenza Benissimo
+ * Layout e tipografia principali in ux-system.css (#mission)
  */
 
-/* Stili di base della sezione */
-#villa-chi-siamo {
-    background-color: var(--color-white);
-    padding: 80px 0;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    color: var(--color-text);
-}
-
-.villa-container {
-    width: 90%;
-    max-width: 1200px;
+#mission .villa-container {
+    width: min(92%, var(--container-max));
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
 }
 
-/* Layout di base */
-.villa-about-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-}
-
-/* Box contenitore per il testo */
-.villa-about-text-box {
-    background-color: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    text-align: left;
-    max-width: none;
-    margin: 0;
-    border: none;
-}
-
-/* Stili tipografici */
-.villa-about-title {
-    font-family: "Merriweather", serif;
-    color: var(--color-primary);
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    line-height: 1.2;
-}
-
-.villa-about-text {
-    font-family: "Open Sans", sans-serif;
-    color: var(--color-text);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Citazione */
-.villa-quote {
-    background-color: var(--color-background);
-    border-left: 4px solid var(--color-primary);
-    padding: 20px;
-    margin: 30px 0;
-    font-style: italic;
-    border-radius: 8px;
-    text-align: left;
-    color: var(--color-text);
-}
-
-/* Contenitore immagine */
-.villa-about-image {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.villa-about-image img {
-    width: 100%;
-    border-radius: 16px;
-    height: auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    display: block;
-}
-
-/* Pulsante CTA */
-.villa-about-cta {
-    margin-top: 30px;
-}
-
-.villa-btn {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 14px 28px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    border: 2px solid var(--color-primary);
-}
-
-.villa-btn:hover {
-    background-color: var(--color-primary-dark, #004A8F);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 95, 184, 0.25);
-}
-
-/* Media queries per responsive design */
-@media screen and (min-width: 768px) {
-    .villa-about-wrapper {
-        flex-direction: row;
-        align-items: center;
-        gap: 60px;
+@media (max-width: 480px) {
+    .about-story-body p {
+        font-size: 0.98rem;
     }
-    
-    .villa-about-text-box {
-        text-align: left;
-        flex: 1;
-    }
-    
-    .villa-about-image {
-        flex: 1;
-    }
-    
-    .villa-quote {
-        margin-left: 20px;
-    }
-}
 
-@media screen and (max-width: 767px) {
-    #villa-chi-siamo {
-        padding: 60px 0;
+    .about-expansion {
+        padding: 1.15rem 1.2rem;
     }
-    
-    .villa-about-title {
-        font-size: 1.8rem;
-    }
-    
-    .villa-about-text {
-        font-size: 1rem;
-    }
-    
-    .villa-about-text-box {
-        padding: 25px;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    #villa-chi-siamo {
-        padding: 40px 0;
-    }
-    
-    .villa-container {
-        width: 95%;
-        padding: 0 10px;
-    }
-    
-    .villa-about-title {
-        font-size: 1.6rem;
-    }
-    
-    .villa-about-text-box {
-        padding: 20px 15px;
-    }
-    
-    .villa-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
+    .value-pillar {
+        padding: 1.35rem 1.25rem;
     }
 }
